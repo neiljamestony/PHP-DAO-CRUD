@@ -1,0 +1,23 @@
+html, body{
+
+    height: 100%;
+    width: 100%;
+    margin: 0 auto
+}
+
+
+section{
+
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.sectionOne{
+
+    background-image: url('<?= URL ?>../img/pic1.jpg') no-repeat;
+    background-size: cover;
+    position: fixed;
+    margin: 0 auto;
+    height: 300px;
+}
