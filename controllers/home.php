@@ -9,8 +9,6 @@
 
         public function index(){
 
-            $this->view->getUsers = $this->model->loadUser();
-
             $this->view->render('views/home/index.php');
         }
 
@@ -47,6 +45,11 @@
         public function regPage(){
 
             $this->view->render('views/home/REG.php');
+        }
+
+        public function viewData(){
+            $this->view->getUsers = $this->model->loadUser();
+            $this->view->render('views/home/view-data.php');
         }
     }
 

@@ -22,7 +22,11 @@
 
             if($success){
 
-                header("Location:" . URL);
+
+                echo '<script>alert("DATA INSERTED SUCCESSFULLY");</script>';
+
+                echo '<script>window.history.back();</script>';
+                // header("Location:" . URL);
 
                 
             }else{
@@ -55,10 +59,7 @@
 
             DAOFactory::getSmurfTblDAO()->update($updateUser);
 
-            echo '<script>alert("DATA UPDATED SUCCESSFULLY");</script>';
-
-            header("Location:" . URL); 
-
+            echo '<script>alert("DATA UPDATED SUCCESSFULLY");</script>' . '<script>javascript:history.go(-2)</script>';
             exit; 
         }
 
@@ -70,7 +71,7 @@
 
             DAOFactory::getSmurfTblDAO()->update($deleteUser);
 
-            echo '<script>alert("DATA REMOVED INSERTED");</script>';
+            echo '<script>alert("DATA REMOVED SUCCESSFULLY");</script>';
             echo '<script>window.history.back();</script>';
         }
     }

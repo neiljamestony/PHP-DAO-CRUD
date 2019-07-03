@@ -1,3 +1,10 @@
+Swal.fire({
+    position: "top-end",
+    type: "success",
+    title: "DATA INSERTED SUCCESSFULLY",
+    showConfirmButton: false,
+    timer: 1500
+});
 // $(function(){
 
 //     $('body')
