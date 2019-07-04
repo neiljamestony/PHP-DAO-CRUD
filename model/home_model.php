@@ -78,11 +78,8 @@
         public function login(){
 
             $fname = $_POST['firstName'];
-            $lname = $_POST['lastName'];
 
-            $res = $fname . $lname;
-
-            $success = DAOFactory::getSmurfTblDAO()->queryAll($res);
+            $success = DAOFactory::getSmurfTblDAO()->queryByFirstName($fname);
 
             if($success){
 

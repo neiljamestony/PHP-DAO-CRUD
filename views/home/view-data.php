@@ -44,7 +44,7 @@
             <?php
 
                 foreach ($fetchData as $key):
-            
+             
             ?>
                 <tr>
                     <td><?= $key->id?></td>
