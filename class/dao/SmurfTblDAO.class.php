@@ -8,7 +8,7 @@
 interface SmurfTblDAO{
 
 	/**
-	 * Get Domain object by primry key
+	 * Get Domain object by primary key
 	 *
 	 * @param String $id primary key
 	 * @Return SmurfTbl 

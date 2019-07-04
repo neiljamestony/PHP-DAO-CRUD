@@ -26,10 +26,21 @@
     <div class="container">
         <div class="card" style="padding: 40px; margin-top: 50px;">
             <table class="table table-striped">
-                <th>ID</th>
-                <th>FIRST NAME</th>
-                <th>LAST NAME</th>
-                <th>ACTION</th>
+            <div class="row">
+                <div class="col-lg-3">
+                    <th>ID</th>
+                </div>
+                <div class="col-lg-3">
+                    <th>FIRST NAME</th>
+                </div>
+                <div class="col-lg-3">
+                    <th>LAST NAME</th>
+                </div>
+                <div class="col-lg-3">
+                    <th>ACTION</th>
+                </div>
+            </div>
+                
             <?php
 
                 foreach ($fetchData as $key):
@@ -40,10 +51,10 @@
                     <td><?= $key->firstName?></td>
                     <td><?= $key->lastName?></td>
                     <td><div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <a type="button" href="<?= URL ?>home/updateUser/<?= $key->id?>" class="btn btn-success btn-sm">Edit</a>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <a type="button" href="<?= URL ?>home/deleteUser/<?= $key->id?>" class="btn btn-danger btn-sm">Delete</a>
                             </div>
                         </div>

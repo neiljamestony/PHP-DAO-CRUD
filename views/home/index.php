@@ -63,12 +63,51 @@
 
         background:transparent;
     }
-    #explore{
-        margin-left: 170px;
-    }
+    
     #view:hover{
 
         background:transparent;
+    }
+    #login{
+
+        margin-left: -380px;
+    }
+    #explore{
+
+        margin-left: 60px;
+    }
+    .letters{
+
+        display: inline-block;
+        font-size: 100px;
+        font-family: Helvetica, serif;
+        margin-top: 100px;
+    }
+    #boom{
+
+        margin-left: -30px;
+    }
+    #first{
+
+        color:red;
+    }
+    #second{
+        color:orange;
+    }
+    #third{
+        color:yellow;
+    }
+    #fourth{
+        color: green;   
+    }
+    #fifth{
+        color:blue;
+    }
+    #sixth{
+        color:DarkOrchid;
+    }
+    #seventh{
+        color:white;
     }
 </style>
 </head>
@@ -93,10 +132,27 @@
         </video>
 
         <div class="content">
-            <h1 style="font-size: 96px; padding-top: 180px; color: white; font-family: leewaldee;" class="animated bounceInLeft delay-1s"><strong>WELCOME</strong></h1>
+            <div id="boom">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="letters">
+                            <div class="letters animated fadeInLeft delay-1s" id="first"><b>E</b></div>
+                            <div class="letters animated fadeInLeft delay-2s" id="second"><b>X</b></div>
+                            <div class="letters animated fadeInLeft delay-3s" id="third"><b>P</b></div>
+                            <div class="letters animated fadeInLeft delay-4s" id="fourth"><b>L</b></div>
+                            <div class="letters animated fadeInLeft delay-5s" id="fifth"><b>O</b></div>
+                            <div class="letters animated fadeInDown delay-5s" id="sixth"><b>R</b></div>
+                            <div class="letters animated fadeInRight delay-5s" id="seventh"><b>E</b></div>
+                        </h1>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <button type="button" id="explore" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-secondary btn-lg animated fadeInUp delay-2s" style="color: white; border-color: white; width: 180px;">Create Account</button>
+                    <button type="button" id="explore" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-secondary btn-lg animated fadeInUp delay-4s" style="color: white; border-color: white; width: 180px;">Create Account</button>
+                </div>
+                <div class="col-lg-6">
+                    <button type="button" id="login" data-toggle="modal" data-target="#loginModal" class="btn btn-outline-secondary btn-lg animated fadeInDown delay-5s" style="color: white; border-color: white; width: 180px;">Login</button>
                 </div>
             </div>
         </div>
@@ -128,6 +184,37 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary" id="add-btn">Submit</button>
                         </form>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!--login modal-->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        
+                        <form method="POST" style="color: yellow;" action="<?= URL ?>home/loginUser" class="form-group" id="form">
+                            <div class="form-input">
+                                <input type="text" name="firstName" id="fname" placeholder="First Name"  class="form-control" required >
+                            </div><br>
+                            <div class="form-input">
+                                <input type="text" name="lastName" id="lname" placeholder="Last Name"  class="form-control" required >
+                            </div>
+                        <br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="add-btn">Submit</button>
+                    </form>
                 </div>
                 </div>
             </div>

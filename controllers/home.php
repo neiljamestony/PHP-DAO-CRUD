@@ -51,6 +51,11 @@
             $this->view->getUsers = $this->model->loadUser();
             $this->view->render('views/home/view-data.php');
         }
+
+        public function loginUser(){
+
+            $this->model->login();
+        }
     }
 
 

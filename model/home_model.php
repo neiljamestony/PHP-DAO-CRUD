@@ -74,6 +74,29 @@
             echo '<script>alert("DATA REMOVED SUCCESSFULLY");</script>';
             echo '<script>window.history.back();</script>';
         }
+
+        public function login(){
+
+            $fname = $_POST['firstName'];
+            $lname = $_POST['lastName'];
+
+            $res = $fname . $lname;
+
+            $success = DAOFactory::getSmurfTblDAO()->queryAll($res);
+
+            if($success){
+
+                echo '<script>alert("DATA IS VALID");</script>';
+
+                echo '<script>window.history.back();</script>';
+
+            }else{
+
+                echo '<script>alert("DATA IS INVALID");</script>';
+                echo '<script>window.history.back();</script>';
+            }
+
+        }
     }
 
 
