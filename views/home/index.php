@@ -26,7 +26,7 @@
     body {
     margin: 0;
     font-family: Arial;
-    font-size: 17px;
+    font-size: 18px;
     }
 
     #myVideo {
@@ -89,7 +89,7 @@
     }
     #first{
 
-        color:red;
+        color:blue;
     }
     #second{
         color:orange;
